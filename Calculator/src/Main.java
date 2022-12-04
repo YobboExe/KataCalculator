@@ -26,7 +26,7 @@ public class Main {
             try{
                 String[] chList = input.split(" ");
                 if(chList.length > 3) {
-                    System.out.println("Должно быть 2 пробела");
+                    throw new Exception("Должно быть 2 пробела");
                 }
                 else{
                         String num1 = chList[0];
@@ -54,7 +54,7 @@ public class Main {
                                 }
 
                         }else {
-                                System.out.println("Ошибка в знаке");
+                                throw new Exception("Ошибка в знаке");
                             }
                         }
                         else if(Arrays.asList(numRim).contains(num1) && Arrays.asList(numRim).contains(num2)){ //Числа одного типа Римские
@@ -84,16 +84,16 @@ public class Main {
                                             return "Проверьте знак.";
                                     }}
                                 else{
-                                        System.out.println("Ошибка в знаке");
+                                        throw new Exception("Ошибка в знаке");
                                     }
 
                         }
                         else{
-                            System.out.println("Перепроверьте условие");
+                            throw new Exception("Перепроверьте условие");
                         }
                     }
                     } catch (Exception e) {
-                System.out.println("Problem");
+                System.out.println("A Problem Occurred");
                 }
         } catch (NumberFormatException e) {
             System.out.println("Пустая строка");
