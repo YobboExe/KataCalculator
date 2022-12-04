@@ -33,7 +33,6 @@ public class Main {
                         String num2 = chList[2];
 
                         if(Arrays.asList(numAr).contains(num1) && Arrays.asList(numAr).contains(num2)){ //Числа одного типа Арабские
-                            System.out.println("Числа одного типа");
                             Integer n1 = Integer.valueOf(chList[0]);
                             Integer n2 = Integer.valueOf(chList[2]);
                             if(Arrays.asList(symb).contains(chList[1])){
@@ -53,9 +52,12 @@ public class Main {
                                 default:
                                     return "Проверьте знак.";
                                 }
-                        }}
+
+                        }else {
+                                System.out.println("Ошибка в знаке");
+                            }
+                        }
                         else if(Arrays.asList(numRim).contains(num1) && Arrays.asList(numRim).contains(num2)){ //Числа одного типа Римские
-                            System.out.println("Числа одного типа");
                             String r1 = chList[0];
                             int rn1 = Roman.valueOf(r1).ordinal();
                             String r2 = chList[2];
@@ -81,6 +83,10 @@ public class Main {
                                         default:
                                             return "Проверьте знак.";
                                     }}
+                                else{
+                                        System.out.println("Ошибка в знаке");
+                                    }
+
                         }
                         else{
                             System.out.println("Перепроверьте условие");
